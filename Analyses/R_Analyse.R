@@ -166,24 +166,7 @@ lm <- lmer(Time ~ Level*Position*Type + (1 | Subject), data = df)
 summary(lmer(Time ~ Level*Position*Type + (1 | Subject), data = df), corr = FALSE)
 
 Anova(lmer(Time ~ Level*Position*Type + (1 | Subject), data = df), type = "III")
-
-
 Anova(lmer(Time ~ Level*Position*Type + (1 | Subject), data = df), type = "III", test.statistic = "F") #Takes a long time
-
-'Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df)
-
-Response: Time
-                            F Df Df.res  Pr(>F)    
-(Intercept)         501.8589  1   29.3 < 2e-16 ***
-  Level                 0.1403  1 8555.0 0.70802    
-Position              0.2090  1 8550.2 0.64759    
-Type                496.1501  2 8550.3 < 2e-16 ***
-  Level:Position        0.0226  1 8550.2 0.88050    
-Level:Type            2.7369  2 8550.4 0.06483 .  
-Position:Type         0.7347  2 8550.1 0.47967    
-Level:Position:Type   0.9759  2 8550.1 0.37688    
----
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1'
 
 aov_car(Time ~ Level*Position*Type + Error(Subject/(Level*Position*Type)), data = df) #used for results section
 
@@ -195,18 +178,6 @@ lm1 <- lmer(Time ~ Position*Type + (1 | Subject), data = df1)
 summary(lm1, corr = FALSE)
 Anova(lmer(Time ~ Position*Type + (1 | Subject), data = df1), type = "III")
 Anova(lmer(Time ~ Position*TypeMV + (1 | Subject), data = df1), type = "III", test.statistic = "F") #Takes a long time again
-
-'Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df)
-
-Response: Time
-F Df Df.res Pr(>F)    
-(Intercept)   556.9652  1   28.4 <2e-16 ***
-  Position        0.2227  1 4671.3  0.637    
-Type          512.5374  2 4671.9 <2e-16 ***
-  Position:Type   0.8258  2 4671.0  0.438    
----
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1'
-
 
 aov_car(Time ~ Position*Type + Error(Subject|(Position*Type)), data = df1)
 
