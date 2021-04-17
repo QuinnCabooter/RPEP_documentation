@@ -8,7 +8,7 @@ The code is programmed in such a way that the directory should not be adapted. H
 
 In the [Analyses](https://github.com/QuinnCabooter/RPEP_documentation/tree/main/Analyses) folder, the main document is [R_Analyses](https://github.com/QuinnCabooter/RPEP_documentation/blob/main/Analyses/R_Analyse.R). Dowloading the folder as a zip should be able to run the code. Again, if anything is not working correctly, be sure to check if the directories are correct.
 
-If anything remain unclear, don't hesitate to contact me for questions.
+If anything remain unclear, don't hesitate to contact me for questions on quinn.cabooter@ugent.be.
 
 Yours truly
 
