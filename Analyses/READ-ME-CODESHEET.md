@@ -58,8 +58,8 @@ What type of response block was it?
 
 
 ### Position
-LVF: Left
-RVF: Right
+LVF: Left  
+RVF: Right  
 
 ### Target
 Is a target present?  
