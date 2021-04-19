@@ -3,7 +3,7 @@
 ### Handedness
 0: Right  
 1: Left  
-2: Ambidexer  
+2: Ambidexter  
 
 ### Gender
 0: Male  
@@ -50,7 +50,7 @@ What type of response block was it?
 ### Handedness
 0: Right  
 1: Left  
-2: Ambidexer  
+2: Ambidexter  
 
 ### Gender
 0: Male  
