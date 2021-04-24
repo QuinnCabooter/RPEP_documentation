@@ -7,6 +7,7 @@ library(predictmeans)
 library(lattice)
 library(ggplot2)
 library(dplyr)
+library(effects)
 #Import datasets from participants separate ----
 pp1 <-  read.csv("RPEP_subject_1_corr.csv", sep = ',', dec = '.')
 pp3 <-  read.csv("RPEP_subject_3_corr.csv", sep = ',', dec = '.')
@@ -183,6 +184,9 @@ aov_car(Time ~ Position*Type + Error(Subject|(Position*Type)), data = df1)
 
 'Verbal vs manual, so only two levels'
 aov_car(Time ~ Position*TypeMV + Error(Subject|(Position*TypeMV)), data = df1) #used for results section
+
+#plotting the main effect of Type
+plot(effect('Type', lm1), main = "")
 
 
 dcast(.~TypeMV, data = df1, value.var = 'Time', mean)
